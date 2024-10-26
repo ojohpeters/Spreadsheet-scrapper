@@ -27,12 +27,12 @@ try:
             uExtract = uExtract.title() 
         try:
             print("Please wait...")
-            mail_range = input("Enter the range of things wey you for like extract:)\n something like 1-100\n")
+            mail_range = input("Enter the range of for extraction:)\n something like 1-100\n")
             mstart, mend = map(int, mail_range.split("-"))
             extracts = df[uExtract].dropna().tolist()[mstart:mend]
             return extracts
         except Exception as e:                        
-            print(f"make sure watin you enter the something like a-z or 20-90\nAnd make sure the name match the Column you entered")  
+            print(f"make sure your input is something like a-z or 20-90\nAnd make sure the name matches the Column you entered")  
 
     def sheet_tofile(extracts, output_file):
         with open (output_file,'a') as file:
